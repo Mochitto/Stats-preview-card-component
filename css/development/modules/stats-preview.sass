@@ -1,6 +1,69 @@
 .stats-preview-card
+    border-radius: 5px
+    height: 60vh
+    margin: 2%
+    @media screen and (max-width: 450px)
+        height: 90vh
+        *
+            text-align: center 
+    
+.stats-preview-card__text
+    padding: 50px 100px 50px 50px
+    @media screen and (max-width: 450px)
+        padding: 20px
+
+/*
+    ---------  LAYOUT  -----------
+
+.stats-preview-card__text > div
+    margin-top: auto
 
 /*
     ---------  THEME  -----------
+#stats-preview__image
+    background: linear-gradient(hsla(277, 64%, 61%, 0.6), hsla(277, 64%, 61%, 0.6)), url("/images/image-header-desktop.jpg") no-repeat center
+    background-size: cover
+    border-top-right-radius: 5px
+    border-bottom-right-radius: 5px
+    @media screen and (max-width: 450px) 
+        order: -1
+
+
+
 .stats-preview-card
     background: #1c1938
+    font-family: 'Inter', sans-serif
+
+.stats-preview-card h2
+    color: #FFF
+    font-weight: bold
+    margin-bottom: 20px
+    @media screen and (max-width: 450px)
+        font-size: 4rem
+
+.stats-preview-card p
+    color: hsla(0, 0%, 100%, 0.75)
+    font-size: 1.5rem
+    line-height: 1.7
+    font-family: 'Lexend Deca', sans-serif
+    @media screen and (max-width: 450px)
+        font-size: 2rem
+
+.stats-preview-card--highlight
+    color: #a65ad8
+
+.stats-preview-card__stat
+    font-size: 2.5rem
+    color: #FFF
+    text-transform: uppercase
+    font-weight: bold
+    margin-bottom: 10px
+    @media screen and (max-width: 450px)
+        margin-bottom: 0
+        margin-top: 20px
+
+.stats-preview-card__statheading
+    font-size: 1.2rem
+    letter-spacing: 1.5px
+    text-transform: uppercase
+    color: hsla(0, 0%, 100%, 0.6)

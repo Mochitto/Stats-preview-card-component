@@ -9,20 +9,29 @@
   <title>Stats preview</title>
 
   <link rel="stylesheet" href="css/style.css">
-
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap" rel="stylesheet"> 
 
 </head>
 <body>
-  <main>
-    <section class="stats-preview-card">
-      <h1>Get <span>insights</span> that help your business grow.</h1>
+  <main class="l-col l-center">
+    <section class="stats-preview-card l-row-flip l-row-2">
+      <div class="stats-preview-card__text l-col">
+        <h2>Get <span class="stats-preview-card--highlight">insights</span> that help your business grow.</h2>
 
-      <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer 
-        experience, and overall efficiency.</p>
-    
-      10k+ companies
-      314 templates
-      12m+ queries
+        <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer 
+          experience, and overall efficiency.</p>
+
+        <div class="l-row-flip l-space-between">
+          <div class="l-col"><span class="stats-preview-card__stat">10k+</span><span class="stats-preview-card__statheading">companies</span></div>
+        <div class="l-col"><span class="stats-preview-card__stat">314</span><span class="stats-preview-card__statheading">templates</span></div>
+        <div class="l-col"><span class="stats-preview-card__stat">12m+</span><span class="stats-preview-card__statheading">queries</span></div>
+        </div>
+      </div>
+      <div id="stats-preview__image"></div>
+
     </section>
   </main>
 
