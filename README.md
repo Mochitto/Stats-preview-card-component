@@ -1,4 +1,4 @@
-## [--- LIVE WEBSITE ---]()
+## [--- LIVE WEBSITE ---](https://mochitto.github.io/Stats-preview-card-component/)
 
 ## Table of contents
 
@@ -32,8 +32,8 @@ Assignment:
 
 ### Links
 
-- [Solution URL](https://your-solution-url.com)
-- [Live Site URL](https://your-live-site-url.com)
+- [Solution URL](https://www.frontendmentor.io/solutions/stats-preview-card-component-built-with-smacss-methodology-and-sass-LyvMHnoJ7y)
+- [Live Site URL](https://mochitto.github.io/Stats-preview-card-component/)
 
 ## My process
 
