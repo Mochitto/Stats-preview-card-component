@@ -155,125 +155,173 @@ template {
 html {
   font-size: 62.5%; }
 
+/* ---------  VARIABLES (hidden in css)  ----------- */
+/* ----- Base Colors ---- */
 /******************************
  *            BASE            *
  ****************************** */
 body {
-  background: #0a0c1b; }
+  font-family: "Lexend Deca", sans-serif; }
 
 h2 {
-  font-size: 3.5rem;
+  font-family: "Inter", sans-serif;
   margin: 0; }
 
-main {
-  width: 100%;
-  height: 100vh; }
+.large-text {
+  font-size: 4.5rem; }
+  @media screen and (max-width: 450px) {
+    .large-text {
+      font-size: 3.5rem; } }
+
+.medium-text {
+  font-size: 3rem; }
+
+.small-text {
+  font-size: 1.5rem; }
 
 /******************************
  *            LAYOUT          *
  ****************************** */
-.l-col {
+.l-col-flex {
   display: flex;
   flex-flow: column nowrap; }
 
-.l-row-2 > * {
-  width: 50%; }
-  @media screen and (max-width: 450px) {
-    .l-row-2 > * {
-      width: 100%;
-      height: 100%; } }
-
-.l-row-flip {
-  display: flex;
-  flex-flow: row nowrap; }
-  @media screen and (max-width: 450px) {
-    .l-row-flip {
-      flex-flow: column nowrap; } }
-
-.l-row {
+.l-row-flex {
   display: flex;
   flex-flow: row nowrap; }
 
-.l-space-between {
-  justify-content: space-between; }
+.l-viewport {
+  width: 100vw;
+  height: 100vh; }
 
 .l-center {
   justify-content: center;
   align-items: center; }
 
+.l-distance {
+  margin-top: auto; }
+  @media screen and (max-width: 450px) {
+    .l-distance {
+      margin: 0; } }
+
+.l-spacebetween {
+  justify-content: space-between; }
+
 /******************************
  *           MODULES          *
  ****************************** */
 /* ---------  STATS PREVIEW CARD  ----------- */
-.stats-preview-card {
-  border-radius: 5px;
-  height: 60vh;
-  margin: 2%; }
+/***  LAYOUT  *** */
+.stats-preview {
+  display: flex;
+  flex-flow: row nowrap;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  height: 500px;
+  width: 1300px; }
   @media screen and (max-width: 450px) {
-    .stats-preview-card {
-      height: 90vh; }
-      .stats-preview-card * {
-        text-align: center; } }
+    .stats-preview {
+      flex-flow: column nowrap;
+      height: 720px;
+      width: 400px;
+      border-radius: 10px; } }
+  .stats-preview > div:first-child {
+    order: 1;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px; }
+    @media screen and (max-width: 450px) {
+      .stats-preview > div:first-child {
+        order: 0;
+        height: 30%;
+        width: 100%;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: 10px; } }
+  .stats-preview > div:last-child {
+    padding: 80px;
+    height: 100%; }
+    @media screen and (max-width: 450px) {
+      .stats-preview > div:last-child {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        order: 0;
+        height: 70%;
+        width: 100%;
+        padding: 20px 30px;
+        text-align: center; }
+        .stats-preview > div:last-child > div > div {
+          margin: 10px 0; } }
 
-.stats-preview-card__text {
-  padding: 50px 100px 50px 50px; }
+.stats-preview__text > p {
+  line-height: 2;
+  letter-spacing: 1px;
+  padding-right: 50px; }
   @media screen and (max-width: 450px) {
-    .stats-preview-card__text {
-      padding: 20px; } }
+    .stats-preview__text > p {
+      padding: 0;
+      line-height: 1.5; } }
 
-/* ---------  LAYOUT  ----------- */
-.stats-preview-card__text > div {
-  margin-top: auto; }
-
-/* ---------  THEME  ----------- */
-#stats-preview__image {
-  background: linear-gradient(rgba(170, 92, 219, 0.6), rgba(170, 92, 219, 0.6)), url("/images/image-header-desktop.jpg") no-repeat center;
-  background-size: cover;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px; }
+.stats-preview__text > div {
+  margin-right: 50px; }
   @media screen and (max-width: 450px) {
-    #stats-preview__image {
-      order: -1; } }
+    .stats-preview__text > div {
+      margin: 0;
+      flex-flow: column nowrap; } }
 
-.stats-preview-card {
-  background: #1c1938;
-  font-family: "Inter", sans-serif; }
+.stats-preview > * {
+  width: 50%;
+  height: 100%; }
 
-.stats-preview-card h2 {
-  color: #FFF;
-  font-weight: bold;
-  margin-bottom: 20px; }
-  @media screen and (max-width: 450px) {
-    .stats-preview-card h2 {
-      font-size: 4rem; } }
+/***  THEME  *** */
+.stats-preview--t-bg {
+  background: #1b1938; }
 
-.stats-preview-card p {
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 1.5rem;
-  line-height: 1.7;
-  font-family: "Lexend Deca", sans-serif; }
-  @media screen and (max-width: 450px) {
-    .stats-preview-card p {
-      font-size: 2rem; } }
+.stats-preview--t-bold {
+  font-weight: bold; }
 
-.stats-preview-card--highlight {
-  color: #a65ad8; }
+.stats-preview--t-up {
+  text-transform: uppercase; }
 
-.stats-preview-card__stat {
-  font-size: 2.5rem;
-  color: #FFF;
-  text-transform: uppercase;
-  font-weight: bold;
-  margin-bottom: 10px; }
-  @media screen and (max-width: 450px) {
-    .stats-preview-card__stat {
-      margin-bottom: 0;
-      margin-top: 20px; } }
+/* ---------  LAYERED IMG  ----------- */
+.layered-img__layer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit; }
 
-.stats-preview-card__statheading {
-  font-size: 1.2rem;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
+.layered-img__img {
+  background-size: cover; }
+
+/******************************
+ *            THEMES          *
+ ****************************** */
+.t-main-bg {
+  background: #090b1a; }
+
+.t-accent-bg {
+  background: #aa5cdb; }
+
+.t-accent-bg--50 {
+  background: rgba(170, 92, 219, 0.5); }
+
+.t-accent-color {
+  color: #aa5cdb; }
+
+.t-main-text {
+  color: white; }
+
+.t-secondary-text {
   color: rgba(255, 255, 255, 0.6); }
+
+.t-ancillary-text {
+  color: rgba(255, 255, 255, 0.6); }
+
+/* ---------  BG IMG  ----------- */
+.bgimg-studio {
+  max-width: 100%;
+  background: #fff url(../images/image-header-desktop.jpg) no-repeat center/cover; }
+  @media screen and (max-width: 450px) {
+    .bgimg-studio {
+      background: #fff url(../images/image-header-mobile.jpg) no-repeat center/cover; } }
 
 /*# sourceMappingURL=style.css.map */
