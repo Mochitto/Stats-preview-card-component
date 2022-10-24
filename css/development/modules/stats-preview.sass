@@ -1,8 +1,60 @@
 
 /*
     ***  LAYOUT  ***
+$card-border-radius: 10px
+
 .stats-preview
     display: flex
+    flex-flow: row nowrap
+    border-top-left-radius: $card-border-radius
+    border-bottom-left-radius: $card-border-radius
+    height: 500px
+    width: 1300px
+    @media screen and ( max-width: 450px)
+        flex-flow: column nowrap
+        height: 720px
+        width: 400px
+        border-radius: $card-border-radius
+
+    & > div:first-child
+        order: 1
+        border-top-right-radius: $card-border-radius
+        border-bottom-right-radius: $card-border-radius
+        @media screen and ( max-width: 450px)
+            order: 0
+            height: 30%
+            width: 100%
+            border-bottom-right-radius: 0
+            border-top-left-radius: $card-border-radius
+
+    & > div:last-child
+        padding: 80px
+        height: 100%
+        @media screen and ( max-width: 450px)
+            display: flex
+            flex-flow: column nowrap
+            justify-content: space-around
+            order: 0
+            height: 70%
+            width: 100%
+            padding: 20px 30px
+            text-align: center
+            & > div > div
+                margin: 10px 0
+
+.stats-preview__text > p
+    line-height: 2
+    letter-spacing: 1px
+    padding-right: 50px
+    @media screen and ( max-width: 450px)
+        padding: 0
+        line-height: 1.5
+
+.stats-preview__text > div
+    margin-right: 50px
+    @media screen and ( max-width: 450px)
+        margin: 0
+        flex-flow: column nowrap
 
 .stats-preview > *
     width: 50%
@@ -12,3 +64,9 @@
     ***  THEME  ***
 .stats-preview--t-bg
     background: $card-background
+
+.stats-preview--t-bold
+    font-weight: bold
+
+.stats-preview--t-up 
+    text-transform: uppercase
